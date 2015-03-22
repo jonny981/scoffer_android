@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="divider_outer_margin">5dp</dimen>
+    <dimen name="divider_vertical_margin">8dp</dimen>
+    <dimen name="accordion_padding">18dp</dimen>
+    <dimen name="accordion_expanded_padding_side">12dp</dimen>
+    <dimen name="accordion_expanded_padding_topbottom">10dp</dimen>
+    <dimen name="accordion_textview_padding_side">5dp</dimen>
+    <dimen name="accordion_textview_padding_topbottom">5dp</dimen>
+</resources>

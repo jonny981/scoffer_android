@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Default Distance Settings">
+        <com.scoff.scoffer.NumberPreference
+            android:key="walking_value"
+            android:persistent="true"
+            android:defaultValue="1"
+            android:title="Preferred walking distance"/>
+
+        <com.scoff.scoffer.NumberPreference
+            android:key="cycling_value"
+            android:persistent="true"
+            android:defaultValue="10"
+            android:title="Preferred cycling distance"/>
+
+        <com.scoff.scoffer.NumberPreference
+            android:key="driving_value"
+            android:persistent="true"
+            android:defaultValue="30"
+            android:title="Preferred driving distance"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Default Search Settings">
+
+        <ListPreference
+            android:defaultValue="Driving"
+            android:dialogTitle="Select preferred transport option"
+            android:entries="@array/transport_constants"
+            android:entryValues="@array/transport_constants"
+            android:key="default_transport"
+            android:persistent="true"
+            android:summary=""
+            android:title="Default transport mode" />
+
+        <ListPreference
+            android:defaultValue="all"
+            android:dialogTitle="Select preferred company type"
+            android:entries="@array/filter_constants"
+            android:entryValues="@array/filter_constant_values"
+            android:key="default_filter"
+            android:persistent="true"
+            android:summary=""
+            android:title="Default company type" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Favourites">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="Show favourites at top"
+            android:persistent="true"
+            android:key="favourites_top"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Locations">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:title="Use last known location if no GPS"
+            android:persistent="true"
+            android:key="saved_gps"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

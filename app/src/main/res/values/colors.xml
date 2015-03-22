@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="scoffer_red">#e6113e</color>
+    <color name="scoffer_purple">#ba32a0</color>
+    <color name="scoffer_text_default">#414141</color>
+    <color name="scoffer_text_light">#fff5f5f5</color>
+    <!--<color name="background_fill">#e5e5e5</color>-->
+    <color name="background_fill">#fffaf8f6</color>
+    <color name="background_fill_dark">#f0eeec</color>
+    <color name="background_fill_extra_dark">#ff525252</color>
+    <color name="divider_colour">#c7969696</color>
+    <color name="divider_colour_light">#c7c2c2c2</color>
+    <color name="background_shadow">#ff9a9a9a</color>
+    <color name="white">#FFFFFF</color>
+    <color name="list_row_pressed_bg">#6ffbf3ff</color>
+    <!--<color name="favourite_selected">#2e33b5e5</color>-->
+    <color name="favourite_selected">#e5f6fb</color>
+    <color name="button_colour">#33b5e5</color>
+    <color name="button_selected_colour">#33b5e5</color>
+    <color name="button_shadow_colour">#8c102b3a</color>
+</resources>

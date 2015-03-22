@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Bottom 2dp Shadow -->
+    <item android:left="7px"
+        android:top="4px">
+        <shape android:shape="rectangle">
+
+            <solid android:color="@color/button_shadow_colour"/>
+
+        </shape>
+    </item>
+
+    <!-- White Top color -->
+    <item
+        android:left="7px"
+        android:top="4px">
+
+        <shape android:shape="rectangle">
+
+            <!--<solid android:color="@color/background_fill" />-->
+            <gradient
+                android:angle="90"
+                android:centerX="25%"
+                android:startColor="@color/white"
+                android:endColor="@color/background_fill"
+                android:type="linear"
+                />
+            <stroke
+                android:width="5px"
+                android:color="@color/button_selected_colour" />
+        </shape>
+
+    </item>
+</layer-list>

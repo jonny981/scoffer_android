@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/repeatable_background"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/repeatable_background"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/divider_colour"
+        android:dividerHeight="1dp"
+        android:drawSelectorOnTop="true"
+        android:focusable="false"
+        android:listSelector="@drawable/list_selector_white_overlay"
+        android:visibility="visible" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/error_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="110dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/pane_background"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/whoops_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingBottom="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/whoops_icon" />
+
+            <TextView
+                android:id="@+id/something_wrong"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/whoops_icon"
+                android:layout_gravity="center"
+                android:cacheColorHint="#00000000"
+                android:focusable="false"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="@string/something_wrong"
+                android:textColor="@color/scoffer_text_default"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/error_message"
+                android:layout_below="@+id/something_wrong"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:cacheColorHint="#00000000"
+                android:focusable="false"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/scoffer_text_default"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/error_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/error_message"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_selector"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@drawable/button_text_selected"
+                android:textSize="15dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

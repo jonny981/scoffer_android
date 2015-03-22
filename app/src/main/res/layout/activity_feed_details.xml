@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/repeatable_background"
+    android:orientation="vertical"
+    android:padding="@dimen/divider_outer_margin">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textColor="@color/scoffer_text_default">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/detailTitleContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/pane_background_dark">
+
+                <TextView
+                    android:id="@+id/detailTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:lineSpacingExtra="3dp"
+                    android:background="@drawable/detail_offer_title"
+                    android:maxLines="2"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/scoffer_text_light"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailCompanyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/detailTitle"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:paddingTop="8dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/scoffer_text_light"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/detailCompanyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/detailCompanyName"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:textColor="@color/scoffer_text_light"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/detailOpening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/detailCompanyType"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:textColor="@color/scoffer_text_light"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/detailEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/detailOpening"
+                    android:gravity="bottom|right"
+                    android:maxLines="1"
+                    android:textColor="@color/scoffer_text_light"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detailContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_below="@+id/detailTitleContainer"
+                android:layout_marginTop="@dimen/divider_vertical_margin"
+                android:minHeight="150dp">
+
+                <RelativeLayout
+                    android:id="@+id/detailSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/pane_background"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minWidth="170dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <Button
+                        android:id="@+id/intent_phone"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/button_selector"
+                        android:drawableLeft="@drawable/ic_action_call"
+                        android:drawablePadding="-35dp"
+                        android:paddingLeft="10dp"
+                        android:text="Call"
+                        android:textColor="@drawable/button_text_selected"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/intent_email"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/intent_phone"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_selector"
+                        android:drawableLeft="@drawable/mail_button_icon_selected"
+                        android:drawablePadding="-35dp"
+                        android:paddingLeft="10dp"
+                        android:text="Email"
+                        android:textColor="@drawable/button_text_selected"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/intent_web"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/intent_email"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_selector"
+                        android:drawableLeft="@drawable/ic_action_web_site"
+                        android:drawablePadding="-35dp"
+                        android:paddingLeft="10dp"
+                        android:text="Website"
+                        android:textColor="@drawable/button_text_selected"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/detailSummary"
+                    android:background="@drawable/pane_background"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:nestedScrollingEnabled="true"
+                    android:padding="2dp">
+
+                    <ImageView
+                        android:id="@+id/detailImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/map_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detailContainer"
+                android:layout_marginTop="@dimen/divider_vertical_margin"
+                android:background="@drawable/pane_background_white"
+                android:padding="3dp">
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dp"
+                    tools:context=".MapActivity"
+                    tools:layout="@layout/activity_map" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/furtherInfoContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/map_holder"
+                android:layout_marginTop="@dimen/divider_vertical_margin"
+                android:background="@drawable/pane_background"
+                android:paddingBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/furtherInfoHeader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="Offer Details"
+                    android:textColor="@color/scoffer_red"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/furtherInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/furtherInfoHeader"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/scoffer_text_default"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/companyInfoContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/furtherInfoContainer"
+                android:layout_marginTop="@dimen/divider_vertical_margin"
+                android:background="@drawable/pane_background"
+                android:paddingBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/companyInfoHeader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="Company Information"
+                    android:textColor="@color/scoffer_red"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/companyInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/companyInfoHeader"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/scoffer_text_default"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

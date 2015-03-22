@@ -1,0 +1,228 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/repeatable_background"
+    tools:context="com.scoff.scoffer.About">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/about_accordion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accordion_selector"
+                android:gravity="left"
+                android:padding="@dimen/accordion_padding">
+
+                <TextView
+                    android:id="@+id/about_accordion_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="About Scoffer"
+                    android:textColor="@color/scoffer_text_default"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/about_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="-5dp"
+                    android:src="@drawable/ic_action_expand" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_accordion_expanded"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accordion_expanded_background"
+                android:paddingBottom="@dimen/accordion_expanded_padding_topbottom"
+                android:paddingLeft="@dimen/accordion_expanded_padding_side"
+                android:paddingRight="@dimen/accordion_expanded_padding_side"
+                android:paddingTop="@dimen/accordion_expanded_padding_topbottom"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/about_accordion_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pane_background_white"
+                    android:paddingLeft="@dimen/accordion_textview_padding_side"
+                    android:paddingRight="@dimen/accordion_textview_padding_side"
+                    android:paddingTop="@dimen/accordion_textview_padding_topbottom"
+                    android:textColor="@color/scoffer_text_default" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/howto_accordion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accordion_selector"
+                android:gravity="left"
+                android:padding="@dimen/accordion_padding">
+
+                <TextView
+                    android:id="@+id/howto_accordion_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="How To Use"
+                    android:textColor="@color/scoffer_text_default"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/howto_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="-5dp"
+                    android:src="@drawable/ic_action_expand" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/howto_accordion_expanded"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accordion_expanded_background"
+                android:paddingBottom="@dimen/accordion_expanded_padding_topbottom"
+                android:paddingLeft="@dimen/accordion_expanded_padding_side"
+                android:paddingRight="@dimen/accordion_expanded_padding_side"
+                android:paddingTop="@dimen/accordion_expanded_padding_topbottom"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/howto_accordion_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pane_background_white"
+                    android:paddingLeft="@dimen/accordion_textview_padding_side"
+                    android:paddingRight="@dimen/accordion_textview_padding_side"
+                    android:paddingTop="@dimen/accordion_textview_padding_topbottom"
+                    android:textColor="@color/scoffer_text_default" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/developer_accordion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accordion_selector"
+                android:gravity="left"
+                android:padding="@dimen/accordion_padding">
+
+                <TextView
+                    android:id="@+id/developer_accordion_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Developer Information"
+                    android:textColor="@color/scoffer_text_default"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/dev_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="-5dp"
+                    android:src="@drawable/ic_action_expand" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/developer_accordion_expanded"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accordion_expanded_background"
+                android:paddingBottom="@dimen/accordion_expanded_padding_topbottom"
+                android:paddingLeft="@dimen/accordion_expanded_padding_side"
+                android:paddingRight="@dimen/accordion_expanded_padding_side"
+                android:paddingTop="@dimen/accordion_expanded_padding_topbottom"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/developer_accordion_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pane_background_white"
+                    android:paddingLeft="@dimen/accordion_textview_padding_side"
+                    android:paddingRight="@dimen/accordion_textview_padding_side"
+                    android:paddingTop="@dimen/accordion_textview_padding_topbottom"
+                    android:textColor="@color/scoffer_text_default" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/business_accordion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accordion_selector"
+                android:gravity="left"
+                android:padding="@dimen/accordion_padding">
+
+                <TextView
+                    android:id="@+id/business_accordion_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Business Use"
+                    android:textColor="@color/scoffer_text_default"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/bus_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="-5dp"
+                    android:src="@drawable/ic_action_expand" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/business_accordion_expanded"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accordion_expanded_background"
+                android:paddingBottom="@dimen/accordion_expanded_padding_topbottom"
+                android:paddingLeft="@dimen/accordion_expanded_padding_side"
+                android:paddingRight="@dimen/accordion_expanded_padding_side"
+                android:paddingTop="@dimen/accordion_expanded_padding_topbottom"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/business_accordion_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pane_background_white"
+                    android:paddingLeft="@dimen/accordion_textview_padding_side"
+                    android:paddingRight="@dimen/accordion_textview_padding_side"
+                    android:paddingTop="@dimen/accordion_textview_padding_topbottom"
+                    android:textColor="@color/scoffer_text_default" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

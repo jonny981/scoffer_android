@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_fill"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <FrameLayout
+        android:id="@+id/thumbImageHolder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/pane_background_white"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/thumbImage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/list_placeholder" />
+    </FrameLayout>
+
+    <!--NON DYNAMIC IMAGEVIEW LAYOUT-->
+    <!--<ImageView-->
+    <!--android:id="@+id/thumbImage"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:background="@drawable/list_placeholder" />-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/thumbImageHolder"
+        android:layout_toRightOf="@id/thumbImageHolder"
+        android:gravity="bottom"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:textColor="@color/scoffer_text_default"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/title"
+            android:background="@drawable/top_border"
+            android:layout_centerHorizontal="true"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_section"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:gravity="bottom"
+            android:layout_below="@+id/divider"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/companyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="this is the name of the company"
+                android:textColor="@color/scoffer_text_default"
+                android:textSize="14dp"
+                android:textAllCaps="true"/>
+
+            <ImageView
+                android:id="@+id/location_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/distance"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-5dp"
+                android:src="@drawable/ic_action_place_red" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/companyName"
+                android:layout_toRightOf="@+id/location_icon"
+                android:lines="1"
+                android:paddingTop="5dp"
+                android:text="this is the distance from the users location"
+                android:textColor="@color/scoffer_text_default"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="bottom|right"
+            android:layout_alignBottom="@+id/bottom_section"
+            android:layout_alignTop="@+id/bottom_section">
+
+            <CheckBox
+                android:id="@+id/btn_star"
+                style="?android:attr/starStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
